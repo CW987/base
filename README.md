@@ -5,6 +5,8 @@
 1. Setup Next.js
 2. Revsion from Week 8
     - File system routing, and LINK
+    - Metadata
+    - Components
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
