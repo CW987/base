@@ -25,16 +25,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>
-          {/* <h1>Test App - I am in the header</h1>
-          <Link href="/">Home </Link>
-          <Link href="/about">About</Link>
-          <Link href="/posts/1">Post 1</Link> */}
-          <br></br>
-        </header>
         <Header/>
         {children}
-        <br></br>
         <Footer/>
       </body>
     </html>

@@ -6,7 +6,7 @@ export default function Header() {
         <h1>I am the component header</h1>
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
-        <Link href="/posts/1">Post 1</Link>
+        <Link href="/posts">Posts</Link>
         </>
     )
 }
