@@ -10,6 +10,12 @@
     - Data fetching
     - Parsing ~ JSON
     - Query string parameters
+    - Supabase connection
+
+### Build Notes
+
+- Postgres: used Supabase to stick with connecting external services to make the skill more transferrable vs. using a fully integrated service like Vercel.
+        - Connection information is within Utilities.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
