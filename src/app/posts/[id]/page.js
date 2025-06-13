@@ -1,24 +1,31 @@
-export async function generateMetadata({ params, searchParams }, parent) {
-    const id = (await params).id;
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-    const post = await res.json();
-    return {
-        title: post.title,
-    }
-}
-// Generates the browser tab title based on the post title it pulls from the api. 
+import { db } from "@/utils/utilities";
 
-export default async function post({ params }) {
-  const slug = await params;
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug.id}`)
-  const post = await response.json();
-  console.log(slug);
-  return (
-    <div>
-      <h1>Post {post.id} </h1>
-      <h2> {post.title} </h2>
-      <br></br>
-      <p> {post.body} </p>
-    </div>
-  )
+export async function generateMetadata({ params }) {
+    const paramsWaiter = await params;
+    const id = paramsWaiter.id;
+    const result = await db.query("SELECT * FROM posts WHERE id = $1", [id]);
+    const post = result.rows[0];
+    return {
+        title: post ? post.title : "Post not found",
+    };
+}
+
+export default async function Post({ params }) {
+    const paramsWaiter = await params;
+    const id = paramsWaiter.id;
+    const result = await db.query("SELECT * FROM posts WHERE id = $1", [id]);
+    const post = result.rows[0];
+
+    if (!post) {
+        return <div>Post not found</div>;
+    }
+
+    return (
+        <div>
+            <h1>Post {post.id}</h1>
+            <h2>{post.title}</h2>
+            <br />
+            <p>{post.content}</p>
+        </div>
+    );
 }

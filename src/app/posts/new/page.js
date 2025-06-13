@@ -1,4 +1,6 @@
 import pg from "pg";
+import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 export default function NewPostPage() {
     async function handleSavePost(formData) {
@@ -9,6 +11,8 @@ export default function NewPostPage() {
         const content = formData.get("content")
         await db.query(`INSERT INTO posts (title,content) VALUES ($1, $2)`,[title, content,])
         console.log("Post saved!");
+        revalidatePath("/posts");
+        redirect("/posts")
     }
     return (
         <form action={handleSavePost}>

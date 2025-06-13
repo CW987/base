@@ -1,17 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const libreBaskerville = Libre_Baskerville({
+  variable: "--Baskerville",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata = {
@@ -23,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${libreBaskerville.className} antialiased`}
       >
         <Header/>
         {children}

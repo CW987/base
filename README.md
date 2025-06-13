@@ -12,6 +12,8 @@
     - Query string parameters
     - Supabase connection
     - Forms and server actions
+        - New posts page
+        - Page redirects after submit
 
 ### Build Notes
 
