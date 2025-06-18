@@ -14,6 +14,10 @@
     - Forms and server actions
         - New posts page
         - Page redirects after submit
+    - Styling
+    - Breaking some pages up into functions
+        - NavBar
+        - NewPostForm
 
 ### Build Notes
 

@@ -3,10 +3,9 @@ import { db } from "@/utils/utilities";
 
 export default async function PostsPage({ searchParams }) {
     const query = await searchParams;
-    console.log(searchParams, query); //! The docs listed the search params as within "";
+    // console.log(searchParams, query); //! The docs listed the search params as within "";
     const posts = (await db.query(`SELECT * FROM posts`)).rows;
-    console.log(posts);
-
+    // console.log(posts);
     if (query.sort === "desc") {
         posts.reverse();
     }

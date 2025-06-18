@@ -1,14 +1,10 @@
-import Link from "next/link"
+import NavBar from "./NavBar"
 
-export default function Header() {
+export default async function Header() {
     return (
         <>
         <h1>I am the component header</h1>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/posts">Posts</Link>
-        <Link href="/posts/new">New post</Link>
-
+        <NavBar />
         </>
     )
 }
