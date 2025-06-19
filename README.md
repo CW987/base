@@ -1,3 +1,29 @@
+# My App
+
+## Build
+
+1. Setup Next.js
+2. Revsion from Week 8
+    - File system routing, and LINK
+    - Metadata
+    - Components
+    - Data fetching
+    - Parsing ~ JSON
+    - Query string parameters
+    - Supabase connection
+    - Forms and server actions
+        - New posts page
+        - Page redirects after submit
+    - Styling
+    - Breaking some pages up into functions
+        - NavBar
+        - NewPostForm
+
+### Build Notes
+
+- Postgres: used Supabase to stick with connecting external services to make the skill more transferrable vs. using a fully integrated service like Vercel.
+- Postgres: Connection information is within Utilities. src/utils/utilities.js and .env
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
