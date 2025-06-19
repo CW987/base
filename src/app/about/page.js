@@ -8,7 +8,7 @@ export default function about() {
     <>
     <h1>About page</h1>
     <div>
-        
+        I am the about contents in the div
     </div>
     </>
 )}
