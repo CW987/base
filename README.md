@@ -1,9 +1,17 @@
 # My App
 
+Working title of "base". Plan is to cover full stack revision from my coding course. With the bulk of the app so far being about creating posts to be displayed from a database. One page also has a cookie clicker to refresh my logic skills for next.js
+
+Once the basics are done I plan to use it as a "base" for other apps knowing I have the basics up and running with minimal changes needed.
+
+Long aim is to create an app for my home - using APIs of any service I have signed up for. The idea that started it is the API from Octopus Energy. Being on an Agile tariff means I need the live data for current price, and pricing over the next 24 hours to plan battery charging or heavy appliance use.
+
 ## Build
 
-1. Setup Next.js
-2. Revsion from Week 8
+1. Setup new Next.js app
+2. Revsion
+    - Hooks
+    - Lists, Keys, .map()
     - File system routing, and LINK
     - Metadata
     - Components
@@ -18,11 +26,15 @@
     - Breaking some pages up into functions
         - NavBar
         - NewPostForm
+        - HandleSavePost
+    - Started Cookie Cliker
+        -Increase, decrease, and reset count functions
 
 ### Build Notes
 
 - Postgres: used Supabase to stick with connecting external services to make the skill more transferrable vs. using a fully integrated service like Vercel.
 - Postgres: Connection information is within Utilities. src/utils/utilities.js and .env
+- Post form: To stop multiple posts being added to the database the components needed to split into seperate components, one for client the other for server. Then the save handler imported to the main form to enable the functionality.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
